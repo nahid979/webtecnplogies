@@ -2,123 +2,256 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
 }
-
 body {
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
+    background: #0a0e17;
+    color: #e0e6ed;
+}
+.app-container {
     display: flex;
-    flex-direction: column;
-    background-color: #f0f0f0;
+    min-height: 100vh;
 }
-
-header {
-    background-color: #333;
-    color: white;
+.sidebar {
+    width: 220px;
+    background: #0d1520;
     padding: 20px;
-    text-align: center;
+    border-right: 1px solid #1a2a3a;
+    min-height: 100vh;
 }
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
+.sidebar h2 {
+    color: #00d4ff;
+    font-size: 20px;
 }
-
-main {
+.sidebar p {
+    color: #8899bb;
+    font-size: 14px;
+    padding: 5px 0;
+}
+.sidebar hr {
+    border: none;
+    border-top: 1px solid #1a2a3a;
+    margin: 10px 0;
+}
+.sidebar a {
+    display: block;
+    padding: 10px 12px;
+    color: #8899bb;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 3px 0;
+}
+.sidebar a:hover {
+    background: #1a2a44;
+    color: #00d4ff;
+}
+.main-content {
     flex: 1;
-    padding: 30px 20px;
-    max-width: 500px;
-    margin: 0 auto;
-    width: 100%;
+    padding: 30px;
 }
-
-fieldset {
-    background: white;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
+.main-content h2 {
+    color: #fff;
     margin-bottom: 20px;
 }
-
-legend {
-    font-weight: bold;
-    font-size: 18px;
-    padding: 0 10px;
-    color: #333;
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
-
-.form-group {
-    margin-bottom: 15px;
+.stat-box {
+    background: #141e2b;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #1a2a3a;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
 }
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.stat-box h3 {
+    color: #8899bb;
     font-size: 14px;
 }
-
-.submit-btn {
-    width: 100%;
+.stat-box p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00d4ff;
+}
+.stat-box.danger p {
+    color: #ff1744;
+}
+.form-box, .list-box {
+    background: #141e2b;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #1a2a3a;
+    margin-bottom: 20px;
+}
+.form-box input, .form-box select {
     padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    background: #0a111a;
+    border: 1px solid #1a2a3a;
+    border-radius: 6px;
+    color: #fff;
+    margin: 5px;
+}
+.form-box input:focus, .form-box select:focus {
+    outline: 1px solid #00d4ff;
+}
+.btn {
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.btn:hover {
+    transform: scale(1.03);
+}
+.btn-primary {
+    background: linear-gradient(90deg, #00d4ff, #7b2ffc);
+    color: #fff;
+}
+.btn-success {
+    background: #00e676;
+    color: #000;
+}
+.btn-danger {
+    background: #ff1744;
+    color: #fff;
+}
+.btn-secondary {
+    background: #1a2a3a;
+    color: #8899bb;
+}
+.btn-secondary:hover {
+    background: #2a3a4a;
+    color: #fff;
+}
+.btn-sm {
+    padding: 5px 15px;
+    font-size: 12px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 10px;
 }
-
-.submit-btn:hover {
-    background-color: #45a049;
+table th {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #1a2a3a;
+    color: #8899bb;
 }
-
-.error-msg {
-    color: red;
-    margin-bottom: 15px;
-    font-weight: bold;
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #0a111a;
 }
-
-.dashboard-links {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.dashboard-links a {
-    display: inline-block;
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
-    background: #eee;
-    padding: 8px 15px;
-    border-radius: 4px;
-}
-
-.dashboard-links a:hover {
-    background: #ddd;
-}
-
-#emailresponse {
-    font-size: 12px;
-    margin-top: 5px;
-    color: blue;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+.alert {
     padding: 15px;
-    margin-top: 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.alert-success {
+    background: #1b5e20;
+    color: #a5d6a7;
+}
+.alert-danger {
+    background: #b71c1c;
+    color: #ef9a9a;
+}
+.auth-box {
+    max-width: 400px;
+    margin: 50px auto;
+    background: #141e2b;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #1a2a3a;
+}
+.auth-box h2 {
+    text-align: center;
+    color: #00d4ff;
+}
+.auth-box h3 {
+    text-align: center;
+    color: #8899bb;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.auth-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: #0a111a;
+    border: 1px solid #1a2a3a;
+    border-radius: 6px;
+    color: #fff;
+}
+.auth-box .btn {
+    width: 100%;
+    margin: 10px 0;
+}
+.auth-box p {
+    text-align: center;
+    color: #8899bb;
+}
+.auth-box a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+.auth-box a:hover {
+    text-decoration: underline;
+}
+
+/* Voice Button Animation */
+#voiceBtn {
+    transition: all 0.3s ease;
+}
+#voiceBtn:active {
+    transform: scale(0.95);
+}
+#voiceBtn.listening {
+    animation: pulse 1.5s infinite;
+    background: #ff1744 !important;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 23, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 23, 68, 0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 10px;
+    }
+    .sidebar a {
+        display: inline-block;
+        padding: 8px 12px;
+        margin: 2px;
+    }
+    .main-content {
+        padding: 15px;
+    }
+    .stats {
+        flex-direction: column;
+    }
+    .form-box input, .form-box select {
+        width: 100%;
+    }
+    .auth-box {
+        margin: 20px;
+        padding: 20px;
+    }
+    .voice-section div {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
