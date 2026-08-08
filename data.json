@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Kabbo ",
+        "email": "kabbo@gmail.com",
+        "phone": "01711615463",
+        "password_hash": "$2y$10$ARFwcGUvN09XD3XRWQDdA.H4XjmVp2vJz3RvszUNtNOeB6rhMQYqG",
+        "role": "member"
+    },
+    {
+        "name": "nirob ",
+        "email": "nirob@gmail.com",
+        "phone": "123",
+        "password_hash": "$2y$10$IK.FzgAYW2GqBKsQ\/I1CvePz44yY.h0IWGy7ckImsTGvDuQfrmNoO",
+        "role": "member"
+    },
+    {
+        "name": "nirob",
+        "email": "nirob@gmail.com",
+        "phone": "01711615463",
+        "password_hash": "$2y$10$AVawEKjXiXc8AdagByMjKO7xSAjCzpHr5xwU7npkaYWsYpuQ8fpAy",
+        "role": "member"
+    }
+]
